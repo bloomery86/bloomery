@@ -100,6 +100,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile Menu Toggle
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (burgerMenu && mainNav) {
+        burgerMenu.addEventListener('click', () => {
+            console.log('Burger menu clicked'); // Debug log
+            burgerMenu.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    } else {
+        console.error('Burger menu or main nav elements not found'); // Debug log
+    }
 });
 
 // Cart functionality

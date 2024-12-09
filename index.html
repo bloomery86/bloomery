@@ -32,7 +32,26 @@
                         <li><a href="#categories"><i class="fas fa-leaf"></i> Colecții</a></li>
                         <li><a href="#about"><i class="fas fa-heart"></i> Despre Noi</a></li>
                     </ul>
+                    <div class="mobile-nav-actions">
+                        <a href="#search" class="action-icon search-icon" title="Căutare">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#account" class="action-icon account-icon" title="Contul Meu">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="cart-wrapper">
+                            <a href="#cart" class="action-icon cart-icon" title="Coș">
+                                <i class="fas fa-shopping-basket"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
                 </nav>
+                <button class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="header-actions">
                     <a href="#search" class="action-icon search-icon" title="Căutare">
                         <i class="fas fa-search"></i>
@@ -53,11 +72,13 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background" style="background-image: url('./images/large1.jpeg')"></div>
+        <div class="hero-background" style="background-image: url('images/large1.jpeg');"></div>
+        <div class="hero-background mobile-background" style="background-image: url('images/mobile.jpeg');"></div>
         <div class="hero-content">
             <span class="hero-subtitle" data-speed="0.85">Buchetărie Artizanală</span>
-            <h1 data-speed="0.9">Creații Florale<br>pentru Suflet</h1>
-            <p data-speed="0.95">Transformăm momentele speciale în amintiri de neuitat prin aranjamente florale create cu pasiune și dedicare</p>
+            <h1 data-speed="0.9">Creații Florale<br><span class="mobile-hide">pentru Suflet</span></h1>
+            <p class="desktop-only" data-speed="0.95">Transformăm momentele speciale în amintiri de neuitat prin aranjamente florale create cu pasiune și dedicare</p>
+            <p class="mobile-only" data-speed="0.95">Buchete create cu pasiune</p>
             <div class="hero-buttons" data-speed="0.98">
                 <a href="#shop" class="cta-button primary">Descoperă Colecția</a>
                 <a href="#custom" class="cta-button secondary">Buchet Personalizat</a>
@@ -111,23 +132,25 @@
                     </div>
                 </div>
             
-                <!-- Product Card 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/4.jpg" alt="Ecuador Premium Roses">
-                        <span class="product-badge">Luxury</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-description">Ecuador • 21 fire</p>
-                        <div class="price-cart">
-                            <p class="price">269.99 RON</p>
-                            <button class="add-to-cart" data-id="3">
-                                <i class="fas fa-shopping-basket"></i>
-                                <span>Adaugă în Coș</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<!-- Product Card 3 -->
+<div class="product-card">
+    <a href="product-detail.html" class="product-link">
+        <div class="product-image">
+            <img src="images/4.jpg" alt="Ecuador Premium Roses">
+            <span class="product-badge">Luxury</span>
+        </div>
+        <div class="product-info">
+            <p class="product-description">Ecuador • 21 fire</p>
+            <div class="price-cart">
+                <p class="price">269.99 RON</p>
+                <button class="add-to-cart" data-id="3">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span>Adaugă în Coș</span>
+                </button>
+            </div>
+        </div>
+    </a>
+</div>
             </div>
 
             <div class="benefits-section">
@@ -143,25 +166,73 @@
 
                 <div class="benefits-grid">
                     <div class="benefit-item">
-                        <div class="benefit-number">01</div>
                         <i class="fas fa-gem"></i>
                         <h3>Selecție Premium</h3>
                         <p>Colaborăm direct cu grădini renumite pentru a-ți aduce cele mai frumoase flori</p>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-number">02</div>
                         <i class="fas fa-hand-holding-heart"></i>
                         <h3>Atenție la Detalii</h3>
                         <p>Fiecare buchet este o operă de artă, creată cu pasiune și măiestrie</p>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-number">03</div>
                         <i class="fas fa-shipping-fast"></i>
                         <h3>Livrare cu Grijă</h3>
                         <p>Transport special pentru flori, cu temperatura controlată și ambalare protectivă</p>
                     </div>
                 </div>
                 
+                <div class="stats-showcase">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stats-content">
+                            <div class="stats-progress">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="stats-value">12+</span>
+                            </div>
+                            <h4>Ani de Experiență</h4>
+                            <p>Pasiune pentru Artă Florală</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="stats-content">
+                            <div class="stats-progress">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="stats-value">10k+</span>
+                            </div>
+                            <h4>Buchete Livrate</h4>
+                            <p>Momente de Bucurie Create</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stats-content">
+                            <div class="stats-progress">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="stats-value">98%</span>
+                            </div>
+                            <h4>Clienți Mulțumiți</h4>
+                            <p>Recenzii de 5 Stele</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="experience-stats">
                     <div class="stat-item">
                         <span class="stat-number">12+</span>
@@ -182,16 +253,6 @@
                     <p class="quote-text">Transformăm momentele speciale în amintiri de neuitat, un trandafir după altul</p>
                     <span class="quote-author">— Echipa Bloomery</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Categories -->
-    <section class="categories">
-        <div class="container">
-            <h2>Cumpără după Categorie</h2>
-            <div class="category-grid">
-                <!-- Category cards will be added here -->
             </div>
         </div>
     </section>
